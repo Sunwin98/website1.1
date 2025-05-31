@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บริการของเรา - บริการการสร้างบ้าน</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #237e4c 100%);
+            color: #000;
+        }
+        header {
+            background: linear-gradient(135deg, #000305 0%, #237e4c 100%);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            animation: fadeDown 1s;
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            animation: fadeIn 1.2s;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            color: #fff;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #000;
+            font-weight: 700;
+            margin: 20px 0;
+            text-align: center;
+            border-radius: 12px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 10px 4px rgba(74,101,114,0.18);
+            padding: 18px 0;
+            background: rgba(255, 255, 255, 0.85); /* Fallback for unsupported devices */
+            backdrop-filter: blur(8px);
+            background: rgba(255,255,255,0.45);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        .portfolio-item,
+        .portfolio-facebook {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            animation: fadeInUpExt 0.9s cubic-bezier(.4,1.4,.6,1) forwards;
+            animation-fill-mode: both;
+            opacity: 1; /* Fallback for browsers with animations disabled */
+        }
+        .portfolio-facebook {
+            animation-delay: 0.2s;
+            grid-column: span 3;
+        }
+        .portfolio-image {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            display: block;
+            background: #e0e0e0;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .portfolio-image.fb {
+            height: 100px;
+            border-radius: 10px 10px 0 0;
+            object-fit: cover;
+            background: #e0e0e0;
+        }
+        .facebook-btn {
+            display: inline-block;
+            margin-top: 14px;
+            padding: 10px 28px;
+            background: #237e4c;
+            color: #fff;
+            border-radius: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            transition:  0.2s, transform 0.2s, box-shadow 0.2s;
+            box-shadow: 0 2px 8px rgba(35,126,76,0.08);
+        }
+        .facebook-btn:hover {
+            background: #1a5e39;
+            color: #fff;
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 6px 18px rgba(254, 254, 255, 0.18);
+        }
+        .facebook-btn2 {
+            color: #2e7d32;
+            text-decoration: none;
+            font-weight: bold;
+            background: #e3f9e5;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .facebook-btn2 {
+            position: relative;
+            overflow: hidden;
+        }
+        .facebook-btn2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background: #2e7d32;
+            transition: width 0.3s cubic-bezier(0.4,0,0.2,1);
+        }
+        .facebook-btn2:hover::after {
+            width: 100%;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+        .portfolio-image:hover {
+            transform: scale(1.08);
+        }
+        .portfolio-content {
+            padding: 1rem;
+        }
+        .portfolio-title {
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem 0;
+            color: #2d3e50;
+        }
+        .portfolio-desc {
+            font-size: 1rem;
+            color: #000;
+        }
+        .price-tag {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 1em;
+            font-weight: bold;
+        }
+        .price-low { /* ราคาต่ำ */
+            background: #e3f9e5;
+            color: #2e7d32;
+            border: 1px solid #b2dfdb;
+            display: block;
+            margin: 28px auto 0 auto; /* เลื่อนลงมาหน่อย */
+            text-align: center;
+            min-width: 120px;
+            max-width: 90%;
+        }
+        .price-mid { /* ราคากลาง */
+            background: #e3f9e5;
+            color: #2e7d32;
+            border: 1px solid #b2dfdb;
+        }
+        .price-high { /* ราคาสูง */
+            background: #e3f9e5;
+            color: #2e7d32;
+            border: 1px solid #b2dfdb;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #000305 0%, #237e4c 100%);
+            color: #fff;
+            width: 100%;
+            animation: fadeUp 1s;
+            z-index: 100;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeInUpExt {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 98vw;
+            }
+            .portfolio-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .portfolio-image {
+                height: 260px;
+            }
+        }
+        @media (max-width: 1024px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio-facebook {
+                grid-column: span 2;
+            }
+            .portfolio-image {
+                height: 220px;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 900px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio-facebook {
+                grid-column: span 2;
+            }
+            .portfolio-image {
+                height: 180px;
+            }
+            h2 {
+                font-size: 1.7rem;
+            }
+        }
+        @media (max-width: 700px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-facebook {
+                grid-column: span 1;
+            }
+            .portfolio-image {
+                height: 160px;
+            }
+            h2 {
+                font-size: 1.3rem;
+                padding: 10px 0;
+            }
+            .container {
+                padding: 0 0.5rem;
+            }
+        }
+        @media (max-width: 480px) {
+            h2 {
+                font-size: 1.1rem;
+                padding: 8px 0;
+            }
+            .portfolio-image {
+                height: 120px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>บริการงานทั่วไป</h1>
+        <p>รวมบริการงานช่างทั่วไปสำหรับบ้านและอาคาร</p>
+    </header>
+    <div class="container">
+        <h2>บริการงานทั่วไป</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="../ผลงานทั่วไป/tp/15.jpg" alt="เทพื้นลานจอดรถ" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">เทพื้นลานจอดรถขนาดใหญ่</div>
+                    <div class="portfolio-desc">รับเหมางานเทพื้นคอนกรีตลานจอดรถสำหรับบ้าน อาคาร หรือโรงงาน งานมาตรฐาน แข็งแรง ทนทาน</div>
+                    <div class="price-tag price-mid">ราคาเริ่มต้น 500 บาท/ตร.ม.</div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="../ผลงานทั่วไป/tp/12.jpg" alt="งานสระว่ายน้ำ" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">งานสระว่ายน้ำ</div>
+                    <div class="portfolio-desc">ออกแบบ ก่อสร้าง และซ่อมแซมสระว่ายน้ำ ทั้งระบบคลอรีนและเกลือ พร้อมบริการดูแลหลังงาน</div>
+                    <div class="price-tag price-high">ราคาเริ่มต้น 350,000 บาท</div>
+                </div>
+            </div>
+            <div class="portfolio-item">
+                <img src="../ผลงานทั่วไป/tp/6.jpg" alt="รีวิวอุปกรณ์งานช่าง" class="portfolio-image">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">รับรีวิวอุปกรณ์งานช่าง</div>
+                    <div class="portfolio-desc">บริการรีวิวและทดสอบอุปกรณ์งานช่าง เครื่องมือก่อสร้าง ด้วย2ช่องทางทั้ง Facebook และ TikTok ที่มีผู้ติดตามมากกว่า 40k</div>
+                    <div class="price-tag price-low">
+                    <a href="https://www.facebook.com/keriyng.kir.kar.chang" target="_blank" class="facebook-btn2">
+                        สอบถามราคา
+                    </a>
+                    </div>
+                </div>
+            </div>
+            <div class="portfolio-facebook">
+                <div class="portfolio-content" style="text-align:center;">
+                    <div class="portfolio-title">ติดต่อเรา</div>
+                    <div class="portfolio-desc">สอบถามข้อมูลหรือปรึกษาโครงการกับทีมงานของเราได้โดยตรงผ่าน Facebook</div>
+                    <div> หรือโทรหาเราได้ที่ <strong>090-945-2224</strong></div> 
+                    <a href="https://www.facebook.com/profile.php?id=100066677683716" target="_blank" class="facebook-btn">
+                        ติดต่อผ่าน Facebook
+                    </a>
+                </div>
+            </div>
+ <!-- ...สามารถเพิ่มบริการอื่นๆ ได้ที่นี่... -->
+  </div> <!-- ปิด .portfolio-grid ให้ถูกต้อง -->
+      </div> <!-- ปิด .container ให้ถูกต้อง -->
+  <footer>
+       &copy; 2025 เกรียงไกร การช่าง. สงวนลิขสิทธิ์.
+     </footer>
+   </body>
+ </html>

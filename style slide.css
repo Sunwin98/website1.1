@@ -1,0 +1,167 @@
+/* CSS for the slider */
+.slider {
+    width: 3000px;
+    height: 200px;
+    display: flex;
+    font-size: 16px;
+    align-items: center;
+    padding: 0;
+    top: 20px;
+    perspective: 100px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.title {
+    color: #080808;
+    font-size: 2rem;
+    font-weight: 700;
+    text-align: center;
+    position: absolute;
+    top: 10%;
+    left: 45%;
+    transform: translate(-50%, -50%);
+}
+
+
+.slide-track {
+    display: flex;
+    width: calc(300px * 18);
+    animation: scroll 40s linear infinite;
+}
+
+.slide {
+    width: 3000px; /* กำหนดความกว้างของแต่ละ slide */
+    height: 1020px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;  /* บังคับภาพไม่ให้ล้น */
+    margin: 0.9px;   /* ระยะห่างระหว่างแต่ละ slide */
+    padding: 10px;
+}
+.images {
+    width: 3000px; /* กำหนดความกว้างของภาพ */
+    height: 100%;
+    object-fit: contain; /* เปลี่ยนจาก cover เป็น contain */
+    object-position: center; /* จัดตำแหน่งภาพให้อยู่กลาง */
+    display: block;
+    transition: transform 0.5s;
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+    animation-delay: 0.5s; /* หรือกำหนด delay ตามต้องการ */
+}
+
+
+.images:hover {
+    transform: scale(1.2); /* ขยายภาพเมื่อ hover */
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(calc(-300px * 9));
+    }
+}
+@media (max-width: 1024px) {
+    .slide {
+        width: 200px;
+        height: 140px;
+    }
+    .title {
+        font-size: 1.2rem;
+        top: 5%;
+        left: 50%;
+    }
+    .slide-track {
+        width: calc(180px * 18);
+    }
+    .slide {
+        width: 160px;
+        height: 200px;
+        padding: px;
+        margin: 0.5px;
+    }
+    .images {
+        width: 200px;
+        height: 200px; /* ปรับความสูงของภาพให้เหมาะสม */
+        object-fit: contain; /* ใช้ cover เพื่อให้ภาพเต็มพื้นที่ */
+    }
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-180px * 9));
+        }
+    }
+}
+
+
+.tiktok-link {
+    position: absolute;
+    top: -10px; /* ปรับตำแหน่งตามต้องการ */
+    right: 20px;
+    width: 280px; /* เพิ่มความยาวของพื้นหลัง */
+    height: 50px;
+    background-color: #000000;
+    border-radius: 25px; /* ทำให้มุมโค้งมน */
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; /* ไอคอนอยู่ขวา */
+    padding-right: 32px;
+    padding-left: 100px;
+    z-index: 1000;
+    transition: transform 0.3s ease; /* เพิ่มการเปลี่ยนแปลงเมื่อ hover */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เพิ่มเงาให้กับพื้นหลัง */
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.tiktok-link:hover .tiktok-icon {
+    transform: scale(1.25) translateX(-17px); /* ขยายไอคอนเมื่อ hover */
+}
+
+
+.tiktok-icon {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 25px; /* ทำให้มุมโค้งมน */
+    background-color: #000000; /* สีพื้นหลังของไอคอน */
+    margin-left: auto;
+    margin-right: auto;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-17px); /* ปรับตำแหน่งไอคอน TikTok ให้อยู่กลาง */
+    transition: transform 0.4s cubic-bezier(0.4, 0.2, 0.2, 1);
+}
+@media (max-width: 600px) {
+    .tiktok-link {
+        width: 290px;
+        height: 50px;
+        top: 230px;
+        right: 70px;
+        bottom: 10px;
+        left: 5px;
+        padding-left: 32px;
+        padding-right: 16px;
+    }
+    .tiktok-icon {
+        width: 35px;
+        height: 35px;
+        left: 120px; /* ปรับตำแหน่งไอคอน TikTok ให้อยู่กลาง */
+        top: 50%;
+        position: absolute;
+        transform: translateY(-50%);
+    }
+    .tiktok-link:hover .tiktok-icon {
+        transform: scale(1) translateZ(10px); /* ขยายไอคอนเมื่อ hover */
+    }
+}

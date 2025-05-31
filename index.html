@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>เกรียงไกร การช่าง - รับเหมาสร้างบ้าน ชะอำ-หัวหิน</title>
+<meta name="description" content="ทีมงานเกรียงไกร การช่าง รับเหมาก่อสร้างบ้าน ชะอำ-หัวหิน โดยทีมช่างมืออาชีพ ประสบการณ์กว่า 20 ปี งานคุณภาพ ราคายุติธรรม พร้อมดูแลตั้งแต่งานออกแบบจนส่งมอบบ้านเสร็จสมบูรณ์"/>
+<meta name="keywords" content="รับเหมาก่อสร้าง, สร้างบ้าน, ต่อเติมบ้าน, รีโนเวท, ชะอำ, หัวหิน, ทีมช่างมืออาชีพ, งานก่อสร้างคุณภาพ,รับเหมาสร้างบ้าน,รับสร้างบ้านชะอำ,รับสร้างบ้านหัวหิน" />
+<meta name="author" content="เกรียงไกร การช่าง" />
+<link rel="icon" href="images/logo.jpg" type="image/x-icon" />
+<link rel="stylesheet" href="style slide.css" />
+<script src="Script.js"></script>
+<script>
+    window.tailwind = {
+        config: {
+            theme: {
+                extend: {
+                    colors: {
+                        primaryGreen: '#2F855A',
+                        darkNeutral: '#121212',
+                        accentOrange: '#DD6B20',
+                        deepBlue: '#2C5282',
+                        lightGrayBg: '#F7FAFC',
+                        softGray: '#E2E8F0',
+                    }
+                }
+            }
+        }
+    }
+</script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap" rel="stylesheet" />
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+    html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        font-family: 'Nunito', sans-serif;
+        color: #121212;
+        background: none !important;
+    }
+    body {
+        min-height: 100vh;
+        width: 100vw;
+        overflow-x: hidden;
+        background: none !important;
+    }
+    .service-card {
+        background: none !important;
+        border-radius: 0.5rem;
+        padding: 1.5rem;
+        cursor: pointer;
+        transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+        border: 1px solid #e5e7eb;
+        box-shadow: none !important;
+    }
+    .service-card:hover {
+        transform: translateY(-6px);
+        border-color: #2F855A;
+        box-shadow: 0 10px 15px -3px rgba(47, 133, 90, 0.4);
+    }
+    .nav-underline {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+        background: transparent;
+        color: rgba(18,18,18,0.85);
+    }
+    .nav-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0.1em;
+        width: 100%;
+        height: 2px;
+        background: #2F855A;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.3s cubic-bezier(.4,0,.2,1);
+    }
+    .nav-underline:hover::after,
+    .nav-underline:focus::after {
+        transform: scaleX(1);
+    }
+    .portfolio-underline {
+        position: relative;
+        display: inline-block;
+        overflow: hidden;
+    }
+    .portfolio-underline::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0.1em;
+        width: 100%;
+        height: 2px;
+        background: #2F855A;
+        transform: scaleX(0);
+        transform-origin: left;
+        transition: transform 0.4s cubic-bezier(.4,0,.2,1);
+    }
+    .group:hover .portfolio-underline::after {
+        transform: scaleX(1);
+    
+    }
+    /* Remove background from nav */
+    nav, .backdrop-blur-md {
+        background: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+    }
+    /* Make all sections and containers full width */
+    .max-w-7xl, .max-w-6xl, .max-w-5xl, .max-w-full {
+        max-width: 100vw !important;
+        width: 100vw !important;
+    }
+    .mx-auto, .mx-0, .mx-4, .mx-6, .mx-8 {
+        margin-left: 0 !important;
+        margin-right: 0 !important;
+    }
+    .px-6, .px-8, .px-4, .px-2, .md\:px-6 {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+    #contact.contact-section {
+        color: #121212;
+    }
+
+  .slide.img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .slide {
+    max-width: 100%;
+    overflow: hidden;
+  }
+</style>
+
+</head>
+<body class="text-darkNeutral">
+<nav class="shadow-md sticky top-0 z-20 transition duration-500" data-aos="fade-down" data-aos-duration="800">
+    <div class="w-full px-0 py-3 flex justify-between items-center">
+        <h1 class="text-xl sm:text-2xl font-extrabold text-primaryGreen flex items-center space-x-2 sm:space-x-3">
+            <img src="images/logo.jpg" alt="โลโก้" class="w-8 h-8 sm:w-10 sm:h-10 rounded-full object-cover" />
+            <span>เกรียงไกร การช่าง</span>
+        </h1>
+        <button id="nav-toggle" class="sm:hidden flex flex-col justify-center items-center w-10 h-10 focus:outline-none" aria-label="เมนู">
+            <span class="block w-6 h-0.5 bg-primaryGreen mb-1"></span>
+            <span class="block w-6 h-0.5 bg-primaryGreen mb-1"></span>
+            <span class="block w-6 h-0.5 bg-primaryGreen"></span>
+        </button>
+        <div id="nav-menu" class="hidden sm:flex flex-col sm:flex-row gap-2 sm:gap-4 text-base sm:text-lg font-bold items-start sm:items-center absolute sm:static top-full left-0 w-full sm:w-auto px-0 py-2 sm:py-0 z-30">
+            <a href="#about" class="nav-underline px-3 py-2 rounded transition">เกี่ยวกับเรา</a>
+            <a href="#portfolio" class="nav-underline px-3 py-2 rounded transition">ผลงาน</a>
+            <a href="#services" class="nav-underline px-3 py-2 rounded transition">บริการ</a>
+            <a href="#contact" class="nav-underline px-3 py-2 rounded transition">ติดต่อ</a>
+        </div>
+    </div>
+    </nav>
+        <script>
+    const navToggle = document.getElementById('nav-toggle');
+    const navMenu = document.getElementById('nav-menu');
+    navToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('hidden');
+    });
+    navMenu.querySelectorAll('a').forEach(link => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 640) navMenu.classList.add('hidden');
+        });
+    });
+    </script>
+</nav>
+
+<!-- Scroll to Top Button -->
+<button
+    id="scrollTopBtn"
+    class="fixed bottom-8 right-8 text-black p-4 rounded-full transition-all duration-300 opacity-0 pointer-events-none z-50 flex items-center space-x-2 group"
+    aria-label="กลับไปด้านบน"
+>
+    <svg
+        class="w-6 h-6 group-hover:animate-bounce"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+        aria-hidden="true"
+    >
+        <path stroke-linecap="round" stroke-linejoin="round" d="M5 15l7-7 7 7"/>
+    </svg>
+    <span class="hidden sm:inline font-bold">กลับไปด้านบน</span>
+</button>
+<script>
+    const scrollBtn = document.getElementById("scrollTopBtn");
+    window.addEventListener("scroll", () => {
+        if (window.scrollY > 300) {
+            scrollBtn.classList.remove("opacity-0", "pointer-events-none");
+            scrollBtn.classList.add("opacity-100", "pointer-events-auto");
+        } else {
+            scrollBtn.classList.add("opacity-0", "pointer-events-none");
+            scrollBtn.classList.remove("opacity-100", "pointer-events-auto");
+        }
+    });
+    scrollBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+</script>
+
+<section id="hero" class="relative w-full h-screen min-h-screen flex items-center justify-center overflow-hidden">
+    <video id="heroVideo" class="absolute inset-0 w-full h-full object-cover opacity-0 transition-opacity duration-2000" autoplay loop muted playsinline>
+        <source src="videos/ภาพหน้าเว็บ.mp4">
+        Your browser does not support the video tag.
+    </video>
+    <div class="absolute inset-0"></div>
+    <div id="heroText" class="relative w-full h-full flex flex-col items-center justify-center text-center px-6 py-12 z-10 opacity-0 transition-opacity duration-2000">
+        <h2 
+            class="text-6xl md:text-7xl font-extrabold mb-10 text-white drop-shadow-lg" 
+            data-aos="fade-up" 
+            data-aos-duration="1000"
+        >
+            ทีมงานเกรียงไกร การช่าง
+        </h2>
+        <p 
+            class="text-2xl md:text-3xl font-medium mb-12 text-white drop-shadow"
+            data-aos="fade-up"
+            data-aos-delay="200"
+            data-aos-duration="1000"
+        >
+            เราคือทีมงานมืออาชีพที่พร้อมสร้างสรรค์ผลงานคุณภาพ เพื่อบ้านและโครงการของคุณ
+        </p>
+    </div>
+    <script>
+        window.addEventListener('DOMContentLoaded', function () {
+            const video = document.getElementById('heroVideo');
+            const heroText = document.getElementById('heroText');
+            video.addEventListener('canplay', function () {
+                video.classList.add('opacity-100');
+                heroText.classList.add('opacity-100');
+            });
+        });
+    </script>
+</section>
+<style>
+    #heroVideo {
+        opacity: 0;
+        transition: opacity 2s;
+    }
+    #heroVideo.opacity-100 {
+        opacity: 1;
+    }
+    #heroText {
+        opacity: 0;
+        transition: opacity 2s;
+    }
+    #heroText.opacity-100 {
+        opacity: 1;
+    }
+</style>
+<section id="about" class="w-full my-16 px-6" data-aos="fade-up" data-aos-duration="1000">
+    <div class="rounded-lg p-8 w-full">
+        <h2 class="text-4xl font-bold mb-4 text-primaryGreen" data-aos="fade-up" data-aos-duration="1000">เกี่ยวกับเรา</h2>
+        <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="100" data-aos-duration="1000">
+            เกรียงไกร การช่าง คือทีมช่างก่อสร้างในพื้นที่ ชะอำ - หัวหิน ที่ให้บริการอย่างมืออาชีพ ด้วยประสบการณ์ด้านงานก่อสร้างและต่อเติมมากกว่า 10 ปี เราพร้อมดูแลงานตั้งแต่ขนาดเล็กไปจนถึงโครงการขนาดใหญ่ ด้วยความใส่ใจในคุณภาพทุกขั้นตอน
+            <br><br>
+            เรามีความเชี่ยวชาญทั้งงานสร้างบ้านใหม่ งานเทพื้นคอนกรีต ถนน โรงจอดรถ ไปจนถึงการรีโนเวทและต่อเติมอาคาร ด้วยทีมงานที่มากด้วยฝีมือ ซื่อสัตย์ และตรงต่อเวลา พร้อมให้คำปรึกษาฟรีก่อนเริ่มงานจริง
+            <br><br>
+            เราใช้วัสดุคุณภาพสูงและเทคโนโลยีที่ทันสมัยในการก่อสร้าง เพื่อให้มั่นใจในความแข็งแรงและความสวยงามของผลงานทุกชิ้น
+            <br><br>
+            หากคุณกำลังมองหาทีมงานก่อสร้างที่เชื่อถือได้และมีประสบการณ์ในพื้นที่ ชะอำ - หัวหิน ทีมงานเกรียงไกร การช่าง ยินดีให้บริการคุณอย่างเต็มที่
+        </p>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mt-10 w-full">
+        <div data-aos="fade-up" data-aos-delay="200" data-aos-duration="800" class="flex flex-col items-center">
+            <img src="images/เกี่ยวกับเรา/บ้าน1.png" alt="ภาพตัวอย่างการก่อสร้าง" class="rounded-lg mb-4 w-full h-48 object-cover" />
+            <p class="text-base text-gray-700 text-center">ผลงานการก่อสร้างบ้านเดี่ยวที่เน้นความแข็งแรงและสวยงาม</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="300" data-aos-duration="800" class="flex flex-col items-center">
+            <img src="images/เกี่ยวกับเรา/ผู้เชี่ยวชาญ.png" alt="ทีมงานมืออาชีพ" class="rounded-lg mb-4 w-full h-48 object-cover" />
+            <p class="text-base text-gray-700 text-center">ทีมงานช่างผู้เชี่ยวชาญ พร้อมให้คำปรึกษาและดูแลทุกขั้นตอน</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="400" data-aos-duration="800" class="flex flex-col items-center">
+            <img src="images/เกี่ยวกับเรา/DJI_20250124151919_0231_D.JPG" alt="การต่อเติมบ้าน" class="rounded-lg mb-4 w-full h-48 object-cover" />
+            <p class="text-base text-gray-700 text-center">บริการต่อเติมและรีโนเวทบ้านเก่าให้ดูใหม่และทันสมัย</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="500" data-aos-duration="800" class="flex flex-col items-center">
+            <img src="images/เกี่ยวกับเรา/ประชุมงาน.JPG" alt="การวางแผนโครงการ" class="rounded-lg mb-4 w-full h-48 object-cover" />
+            <p class="text-base text-gray-700 text-center">วางแผนโครงการก่อสร้างอย่างมืออาชีพ คำนวณต้นทุนอย่างแม่นยำ</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="600" data-aos-duration="800" class="flex flex-col items-center">
+            <img src="images/เกี่ยวกับเรา/วัสดุ.jpg" alt="วัสดุก่อสร้างคุณภาพ" class="rounded-lg mb-4 w-full h-48 object-cover" />
+            <p class="text-base text-gray-700 text-center">เลือกใช้วัสดุก่อสร้างคุณภาพสูง เพื่อความมั่นใจในทุกผลงาน</p>
+        </div>
+        <div data-aos="fade-up" data-aos-delay="700" data-aos-duration="800" class="flex flex-col items-center">
+            <img src="images/เกี่ยวกับเรา/บริการหลังการขาย.JPG" alt="บริการหลังการขาย" class="rounded-lg mb-4 w-full h-48 object-cover" />
+            <p class="text-base text-gray-700 text-center">บริการหลังการก่อสร้างเรามีบริการรับประกันงานก่อสร้าง เช่น ซ่อมแซมจุดบกพร่องเล็กน้อย</p>
+        </div>  
+    </div>
+</section>
+<section id="team" class="w-full my-32 px-6">
+    <h2 class="text-4xl font-bold mb-8 text-primaryGreen text-center" data-aos="fade-up" data-aos-duration="1000">
+        ทีมงานของเรา
+    </h2>
+    <div class="flex flex-col items-center justify-center" data-aos="fade-up" data-aos-duration="1000">
+        <img src="images/ทีมงาน.jpg" alt="ทีมงานเกรียงไกร การช่าง" class="rounded-lg w-full object-cover mb-6 shadow-2xl" style="max-width:100vw; height:auto; box-shadow: 0 8px 32px rgba(0,0,0,0.25);" />
+        <h3 class="text-xl font-bold text-primaryGreen mb-1">ทีมงานเกรียงไกร การช่าง</h3>
+        <p class="text-gray-700 text-center">ทีมงานมืออาชีพ พร้อมดูแลทุกโครงการของคุณ</p>
+    </div>
+</section>
+ิ 
+<section id="materials" class="w-full my-5 px-6 flex flex-col items-center justify-center text-center max-w-7xl mx-auto">
+    <h2 class="text-4xl font-bold mb-4 text-primaryGreen" data-aos="fade-up" data-aos-duration="1000">วัสดุที่ใช้ในการก่อสร้าง</h2>
+    <p class="text-lg leading-relaxed mb-8 max-w-2xl text-gray-700" data-aos="fade-up" data-aos-duration="1000">
+        เราเลือกใช้วัสดุก่อสร้างที่มีคุณภาพสูงและมาตรฐาน เพื่อให้มั่นใจในความแข็งแรงและความสวยงามของผลงานทุกชิ้น
+    </p>
+</section>
+
+<!-- Image Auto-Scroll Section (15 images, auto-scroll, zoom on hover, no scrollbar) -->
+<section id="materials-scroll" class="w-full flex flex-col items-center my-5">
+    <div class="relative w-full max-w-5xl mx-auto">
+    <div id="scroll-container" class="flex overflow-x-hidden py-4 px-2 select-none items-center gap-[5px]">
+        <!-- Uniform image layout: fixed width, height, object-contain, centered, no shadow -->
+        <img src="imgmaterials-overview.png/341b9e59-2bf6-411b-b388-6b68c500598c.png" alt="เหล็กเส้นคุณภาพสูง" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/chang_0027.png" alt="chang" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/COTTO.png" alt="อิฐมวลเบา" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/for housr.png" alt="ไม้แบบและวัสดุอื่นๆ" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/Global_House_Logo.svg.png" alt="วัสดุ5" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/homepro.png" alt="วัสดุ6" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/pana.png" alt="วัสดุ7" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/ph.png" alt="วัสดุ8" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/scg.png" alt="วัสดุ9" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/toa.png" alt="วัสดุ10" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/บุญถาวร.png" alt="วัสดุ11" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/เขาใหญ่.png" alt="วัสดุ12" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/เสือ.png" alt="วัสดุ13" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/ไดนาสตี้.png" alt="วัสดุ14" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/ไทวัสดุ.png" alt="วัสดุ15" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <!-- Duplicate images for seamless loop -->
+        <img src="imgmaterials-overview.png/341b9e59-2bf6-411b-b388-6b68c500598c.png" alt="เหล็กเส้นคุณภาพสูง" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/chang_0027.png" alt="chang" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/COTTO.png" alt="อิฐมวลเบา" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/for housr.png" alt="ไม้แบบและวัสดุอื่นๆ" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/Global_House_Logo.svg.png" alt="วัสดุ5" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/homepro.png" alt="วัสดุ6" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/pana.png" alt="วัสดุ7" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/ph.png" alt="วัสดุ8" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/scg.png" alt="วัสดุ9" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/toa.png" alt="วัสดุ10" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/บุญถาวร.png" alt="วัสดุ11" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/เขาใหญ่.png" alt="วัสดุ12" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/เสือ.png" alt="วัสดุ13" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/ไดนาสตี้.png" alt="วัสดุ14" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+        <img src="imgmaterials-overview.png/ไทวัสดุ.png" alt="วัสดุ15" class="w-44 h-44 rounded-lg object-contain bg-transparent flex-shrink-0 transition-transform duration-300 hover:scale-110 mx-auto" />
+    </div>
+</section>
+<style>
+#scroll-container::-webkit-scrollbar { display: none; }
+#scroll-container { scrollbar-width: none; -ms-overflow-style: none; }
+#scroll-container img {
+    transition: transform 0.3s ease;
+    will-change: transform;
+}
+</style>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const scrollContainer = document.getElementById("scroll-container");
+    let scrollStep = 1.2;
+    let autoScroll;
+
+    function startAutoScroll() {
+        if (autoScroll) return;
+        autoScroll = setInterval(() => {
+            scrollContainer.scrollLeft += scrollStep;
+            // Loop: if scrolled to end of original images, reset to start
+            if (scrollContainer.scrollLeft >= scrollContainer.scrollWidth / 2) {
+                scrollContainer.scrollLeft = 0;
+            }
+        }, 16);
+    }
+    function stopAutoScroll() {
+        clearInterval(autoScroll);
+        autoScroll = null;
+    }
+    startAutoScroll();
+});
+</script>
+
+<section id="portfolio" class="w-full my-16 px-2 sm:px-4 md:px-8 xl:px-32">
+    <h2 class="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-8 sm:mb-10 text-primaryGreen text-center" data-aos="fade-up" data-aos-duration="1200">ผลงานของเรา</h2>
+    <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 justify-center items-stretch w-full">
+        <!-- ผลงานสร้างบ้าน -->
+        <a href="ผลงานสร้างบ้าน/ผลงานสร้างบ้าน.html"
+           class="w-full rounded-2xl p-4 sm:p-6 flex flex-col items-center transition group hover:shadow-lg"
+           data-aos="fade-up" data-aos-delay="100" data-aos-duration="800" lang="th">
+            <img src="ผลงานสร้างบ้าน/house/22.jpg" alt="ผลงานสร้างบ้าน" class="w-full h-48 sm:h-64 md:h-80 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform duration-300" />
+            <h3 class="portfolio-underline text-xl sm:text-2xl font-extrabold text-primaryGreen mb-2 sm:mb-3 relative">
+                สร้างบ้าน
+            </h3>
+            <p class="text-base text-gray-700 text-center">
+                ตัวอย่างผลงานสร้างบ้านเดี่ยวและบ้านสองชั้น ด้วยวัสดุคุณภาพสูง
+            </p>
+        </a>
+        <!-- ผลงานต่อเติม -->
+        <a href="ผลงานต่อเติม/ผลงานต่อเติม.html"
+           class="w-full rounded-2xl p-4 sm:p-6 flex flex-col items-center transition group hover:shadow-lg"
+           data-aos="fade-up" data-aos-delay="200" data-aos-duration="800">
+            <img src="ผลงานต่อเติม/TT/53.jpg" alt="Renovation Work" class="w-full h-48 sm:h-64 md:h-80 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform duration-300" />
+            <h3 class="portfolio-underline text-xl sm:text-2xl font-extrabold text-deepBlue mb-2 sm:mb-3 relative">
+                ต่อเติม
+            </h3>
+            <p class="text-base text-gray-700 text-center">
+                ผลงานต่อเติม โรงรถ และ รีโนเวทบ้าน พื้นที่ใช้สอยอื่นๆ ให้บ้านสมบูรณ์แบบยิ่งขึ้น
+            </p>
+        </a>
+        <!-- ผลงานทั่วไป -->
+        <a href="ผลงานทั่วไป/ผลงานทั่วไป.html"
+           class="w-full rounded-2xl p-4 sm:p-6 flex flex-col items-center transition group hover:shadow-lg"
+           data-aos="fade-up" data-aos-delay="300" data-aos-duration="800">
+            <img src="ผลงานทั่วไป/tp/21.png" alt="งานทั่วไป" class="w-full h-48 sm:h-64 md:h-80 object-cover rounded-xl mb-4 group-hover:scale-105 transition-transform duration-300" />
+            <h3 class="portfolio-underline text-xl sm:text-2xl font-extrabold text-accentOrange mb-2 sm:mb-3 relative">
+                งานทั่วไป
+            </h3>
+            <p class="text-base text-gray-700 text-center">
+                ตัวอย่างผลงานรับงานเทพื้นขนาดใหญ่ เช่น ถนน ลานจอดรถปั้มที่ใช้คุณภาพด้วยมาตรฐานสูง
+            </p>
+        </a>
+    </div>
+</section>
+
+<section id="services" class="w-full my-16 px-4 md:px-8">
+    <h2 class="text-4xl font-extrabold mb-8 px-6 md:px-12 lg:px-32 text-primaryGreen text-center" data-aos="fade-up" data-aos-duration="1200">
+        บริการของเรา
+    </h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-4 w-full">
+        <a href="บริการของเรา/บริการสร้างบ้าน.html"
+           class="service-card border-primaryGreen hover:border-accentOrange transition-transform duration-300 hover:-translate-y-2 group mx-1 md:mx-2"
+           data-aos="zoom-in" data-aos-delay="100" data-aos-duration="800">
+            <h3 class="portfolio-underline text-2xl font-extrabold text-accentOrange mb-2 relative text-xl font-semibold text-primaryGreen transition-transform duration-300 group-hover:-translate-y-1">
+                สร้างบ้าน
+            </h3>
+            <p class="text-gray-700 transition-transform duration-300 group-hover:-translate-y-1">
+                บริการสร้างบ้านเดี่ยวตามแบบที่คุณต้องการ ด้วยวัสดุคุณภาพและทีมงานมืออาชีพ
+            </p>
+        </a>
+        <a href="บริการของเรา/บริการต่อเติม และ รีโนเวล.html"
+           class="service-card border-primaryGreen hover:border-deepBlue transition-transform duration-300 hover:-translate-y-2 group mx-1 md:mx-2"
+           data-aos="zoom-in" data-aos-delay="200" data-aos-duration="800">
+            <h3 class="portfolio-underline text-2xl font-extrabold text-accentOrange mb-2 relative text-xl font-semibold text-primaryGreen transition-transform duration-300 group-hover:-translate-y-1">
+                ต่อเติม-รีโนเวท
+            </h3>
+            <p class="text-gray-700 transition-transform duration-300 group-hover:-translate-y-1">
+                ปรับปรุงบ้านเก่าให้ดูใหม่และทันสมัย พร้อมใช้งานได้อย่างเต็มประสิทธิภาพ
+            </p>
+        </a>
+        <a href="บริการของเรา/บริการงานทั่วไป.html"
+           class="service-card border-primaryGreen hover:border-accentOrange transition-transform duration-300 hover:-translate-y-2 group mx-1 md:mx-2 md:mr-4"
+           style="max-width:95%;" data-aos="zoom-in" data-aos-delay="300" data-aos-duration="800">
+            <h3 class="portfolio-underline text-2xl font-extrabold text-accentOrange mb-2 relative text-xl font-semibold text-primaryGreen transition-transform duration-300 group-hover:-translate-y-1">
+            งานทั่วไป
+            </h3>
+            <p class="text-gray-700 transition-transform duration-300 group-hover:-translate-y-1">
+            รับงานเทพื้นคอนกรีต ถนน โรงจอดรถ และงานก่อสร้างทั่วไปทุกประเภท
+            </p>
+        </a>
+    </div>
+</section>
+
+<section id="contact" class="w-full my-20 px-4 sm:px-8 md:px-32 lg:px-64 py-14 rounded-2xl flex flex-col items-center contact-section" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+    <div class="w-full flex flex-col items-center px-2 sm:px-4 md:px-8 lg:px-12">
+        <div class="flex flex-col md:flex-row w-full justify-between items-start gap-8">
+            <!-- Left: Contact Info -->
+            <div class="flex flex-col md:w-1/2 items-start text-left pl-2 md:pl-6">
+                <h2 class="text-4xl font-bold mb-4 text-black">ติดต่อเรา</h2>
+                <p class="text-lg text-black">โทรศัพท์: 090-945-2224</p>
+                <p class="text-lg text-black">อีเมล: keriyngkir2224@gmail.com</p>
+                <p class="text-lg text-black">ที่อยู่: 240/3 หมู่ที่1 ต.เขาใหญ่ อ.ชะอำ จ.เพชรบุรี 76120</p>
+            </div>
+            <!-- Right: Social Links -->
+            <div>
+                <a href="https://www.tiktok.com/@a1tar5"  class="tiktok-link" target="_blank" 
+                    data-aos="fade-up" data-aos-delay="100" data-aos-duration="800">
+                    <img src="images/tiktok 2.png"
+                        alt="TikTok" class="tiktok-icon" />
+                </a>
+            </div>
+                <div class="w-full max-w-[300px] flex justify-center md:justify-end">
+                    <div class="fb-page"
+                        data-href="https://www.facebook.com/profile.php?id=100066677683716&amp;amp;locale=th"
+                        data-tabs="timeline"
+                        data-width="460"
+                        data-height="120"
+                        data-small-header="false"
+                        data-adapt-container-width="true"
+                        data-hide-cover="false"
+                        data-show-facepile="false">
+                        <blockquote cite="https://www.facebook.com/profile.php?id=100066677683716&amp;locale=th" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/profile.php?id=100066677683716&amp;locale=th" style="color:#121212;">รับสร้างบ้าน  ชะอำ - หัวหิน by ทีมงานเกรียงไกร การช่าง</a>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="py-5 flex flex-col items-center justify-center text-center">
+    <span class="mx-auto">&copy; 2025 เกรียงไกร การช่าง. สงวนลิขสิทธิ์.</span>
+</footer>
+
+<div id="fb-root"></div>
+<script async defer crossorigin="anonymous" src="https://connect.facebook.net/th_TH/sdk.js#xfbml=1&version=v22.0"></script>
+<script>
+AOS.init();
+</script>
+</body>
+</html>

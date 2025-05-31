@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงานสร้างบ้าน | Portfolio</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #237e4c 100%);
+            color: rgb(0, 0, 0);
+        }
+        header {
+            background: linear-gradient(135deg, #000305 0%, #237e4c 100%);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            animation: fadeDown 1s;
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #000000;
+            font-weight: 700;
+            margin: 20px 0;
+            text-align: center;
+            position: static;
+            border-radius: 12px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 10px 4px rgba(74,101,114,0.18);
+            padding: 18px 0;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.45);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            animation: fadeInUpExt 0.9s cubic-bezier(.4,1.4,.6,1) forwards;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+        .portfolio-img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+            background: #e0e0e0;
+            transform: scale(1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s;
+        }
+        .portfolio-img:hover {            
+            transform: scale(1.08);
+        }
+        .portfolio-content {
+            padding: 1rem;
+        }
+        .portfolio-title {
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem 0;
+            color: #2d3e50;
+        }
+        .portfolio-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 98vw;
+            }
+        }
+        @media (max-width: 900px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio-img {
+                height: 200px;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-img {
+                height: 260px;
+            }
+            h2 {
+                font-size: 1.3rem;
+                padding: 10px 0;
+            }
+            .container {
+                padding: 0 0.5rem;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #000305 0%, #237e4c 100%);
+            color: #fff;
+            width: 100%;
+            animation: fadeUp 1s;
+            z-index: 100;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeInUpExt {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>รวมผลงานการสร้างบ้านที่ผ่านมาของเรา</h1>
+        <p>รวมผลงานสร้างบ้านของทีมงาน เกรียงการ การช่าง </p>
+    </header>
+    <div class="container">
+        <h2>ผลงานของเรา</h2>
+        <div class="portfolio-grid">
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="house/1.jpg" alt="บ้านสไตล์โมเดิร์น" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านชั้นเดียวขนาดกะทัดรัด สไตล์โมเดิร์น ออกแบบและสร้ายโดยทีมงานเรา</div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.24s">
+                <img src="house/4.jpg" alt="สุเหร่า" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">สุเหร่า</div>
+                    <div class="portfolio-desc">ศาสนสถานของชาวมุสลิมที่ใช้ประกอบพิธีกรรมทางศาสนา</div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.36s">
+                <img src="house/3.jpg" alt="สุเหร่า" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">สุเหร่า</div>
+                    <div class="portfolio-desc">ศาสนสถานของชาวมุสลิมที่ใช้ประกอบพิธีกรรมทางศาสนา</div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/30.jpg" alt="บ้านสไตล์รีสอร์ท 30" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์รีสอร์ท</div>
+                    <div class="portfolio-desc">บ้านพักตากอากาศสไตล์รีสอร์ท เน้นความโปร่งโล่งและธรรมชาติ</div>
+                </div>
+            </div>
+            <!-- 31 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/31.jpg" alt="บ้านสไตล์รีสอร์ท 31" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์รีสอร์ท</div>
+                    <div class="portfolio-desc">บ้านพักตากอากาศสไตล์รีสอร์ท เน้นความโปร่งโล่งและธรรมชาติ</div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/7.jpg" alt="บ้านสไตล์รีสอร์ท" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นเดียวพร้อมอยู่</div>
+                    <div class="portfolio-desc">บ้านสไตล์นอดิก มินิมอล พร้อมอยู่ลูกค้ามีแบบมาเองเราก็พร้อมจะสร้าง</div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/8.jpg" alt="บ้านชั้นเดียว พร้อมโรงจอดรถ" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นพร้อมโรงจอดรถ</div>
+                    <div class="portfolio-desc">บ้านเดี่ยวใจกลางเมืองหัวหิน พร้อมโรงจอดรถ สไตล์โมเดิร์น หลังคาทรงปั้นหยา เรียบง่ายแต่มีสไตล์</div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/9.jpg" alt="บ้านชั้นเดียว พร้อมโรงจอดรถ 9" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นพร้อมโรงจอดรถ</div>
+                    <div class="portfolio-desc">บ้านชั้นเดียวขนาดใหญ่ พร้อมโรงจอดรถ</div>
+                </div>
+            </div>
+            <!-- house/10 - house/66 -->
+            <!-- ใช้ loop แบบ manual -->
+            <!-- 10 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/10.jpg" alt="บ้านชั้นเดียว พร้อมโรงจอดรถ 9" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นพร้อมโรงจอดรถ</div>
+                    <div class="portfolio-desc">บ้านชั้นเดียวขนาดใหญ่ พร้อมโรงจอดรถ</div>
+                </div>
+            </div>
+            <!-- 11 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/11.jpg" alt="บ้านสไตล์โมเดิร์น 11" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านแฝดสไตล์โมเดิร์น พร้อมรั้วรอบขอบชิด และ มีพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 12 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/13.jpg" alt="บ้านสไตล์โมเดิร์น 12" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านแฝดสไตล์โมเดิร์น พร้อมรั้วรอบขอบชิด และ มีพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 13 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/12.jpg" alt="คุณเกรียง ไกร 13" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">คุณเกรียงไกร</div>
+                    <div class="portfolio-desc">เจ้าของกิจการ และ ควบคุมหน้างาน มีประสบการณ์ฺงานช่างทุกแขนงมากกว่า 20 ปี</div>
+                </div>
+            </div>
+            <!-- 14 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/14.jpg" alt="บ้านชั้นครึ่ง 14" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 15 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/15.jpg" alt="บ้านชั้นครึ่ง 15" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 16 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/16.jpg" alt="บ้านชั้นครึ่ง 16" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 17 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/17.jpg" alt="ภายในบ้านชั้นครึ่ง 17" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายในบ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 18 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/18.jpg" alt="บ้านชั้นครึ่ง 18" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 19 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/19.jpg" alt="บ้านชั้นครึ่ง 19" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 20-66 -->
+            <!-- ใช้ loop แบบ manual ต่อ -->
+            <!-- 20 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/20.jpg" alt="บ้านชั้นครึ่ง 20" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 21 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/21.jpg" alt="บ้านชั้นครึ่ง 21" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นครึ่ง</div>
+                    <div class="portfolio-desc">บ้านชั้นครึ่งสไตล์คอนเทมโพรารี่ พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 22 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/22.jpg" alt="บ้านชั้นเดียวพร้อมอยู่ 22" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นเดียวพร้อมอยู่</div>
+                    <div class="portfolio-desc">บ้านสไตล์นอดิก มินิมอล เน้นความเรียบง่ายและฟังก์ชันการใช้งาน</div>
+                </div>
+            </div>
+            <!-- 23 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/23.jpg" alt="บ้านชั้นเดียวพร้อมอยู่ 23" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านชั้นเดียวพร้อมอยู่</div>
+                    <div class="portfolio-desc">บ้านสไตล์นอดิก มินิมอล เน้นความเรียบง่ายและฟังก์ชันการใช้งาน</div>
+                </div>
+            </div>
+            <!-- 24 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/24.jpg" alt="บ้านทรงนอดิก 24" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงนอดิก</div>
+                    <div class="portfolio-desc">บ้านบ้านสไตล์นอดิกขนาดใหญ่ แต่ยังคงให้ความโมเดิร์น</div>
+                </div>
+            </div>
+            <!-- 25 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/25.jpg" alt="บ้านทรงปั้นหยา 25" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงปั้นหยา</div>
+                    <div class="portfolio-desc">บ้านทรงปั้นหยาสไตล์ไทยๆ แต่ยังให้ความรู้สึกถึง ความมินิมอล</div>
+                </div>
+            </div>
+            <!-- 26 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/26.jpg" alt="บ้านสไตล์โมเดิร์น 26" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านสไตล์โมเดิร์น มีรั้วรอบพร้อมที่จอดรถ</div>
+                </div>
+            </div>
+            <!-- 27 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/27.jpg" alt="บ้านสไตล์โมเดิร์น 27" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านสไตล์โมเดิร์น มีรั้วรอบพร้อมที่จอดรถ</div>
+                </div>
+            </div>
+            <!-- 28 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/28.jpg" alt="บ้านสไตล์รีสอร์ท 28" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านพักตากอากาศ</div>
+                    <div class="portfolio-desc">บ้านพักตากอากาศ เน้นความโปร่งโล่งและมีชั้นดาดฟ้าชมวิวธรรมชาติ</div>
+                </div>
+            </div>
+            <!-- 29 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/32.jpg" alt="บ้านสไตล์รีสอร์ท 32" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์รีสอร์ท</div> 
+                    <div class="portfolio-desc">บ้านพักสไตล์รีสอร์ท เน้นความหรูหรและมินิมอล</div>
+                </div>
+            </div>
+            <!-- 30-66 -->
+            <!-- ต่อเนื่อง -->
+            <!-- 30 -->
+             <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/5.jpg" alt="บ้านแฝดสไตล์โมเดิร์น" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านแฝดสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านแฝดใจกลางเมืองหัวหิน สร้างโดยทีมงานเรา</div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/6.jpg" alt="ภายในบ้านแฝดสไตล์โมเดิร์น" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายในบ้านแฝดสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านแฝดใจกลางเมืองหัวหิน สร้างโดยทีมงานเรา</div>
+                </div>
+            </div>
+            <!-- 32 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/29.jpg" alt="บ้านสไตล์รีสอร์ท 29" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์รีสอร์ท</div>  
+                    <div class="portfolio-desc">บ้านพักสไตล์รีสอร์ท เน้นความหรูหรและมินิมอล</div>
+                </div>
+            </div>
+            <!-- 33 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/33.jpg" alt="บ้านสไตล์รีสอร์ท 33" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ตาดีการ</div>
+                    <div class="portfolio-desc">เป็นอาคารเรียนขนาดเล็ก ของศาสนาอิสลาม ที่สร้างขึ้นพร้อมสุเหร่า</div>
+                </div>
+            </div>
+            <!-- 34 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/34.jpg" alt="บ้านสไตล์รีสอร์ท 34" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายในตาดีการ</div>
+                    <div class="portfolio-desc">เป็นอาคารเรียนขนาดเล็ก ของศาสนาอิสลาม ที่สร้างขึ้นพร้อมสุเหร่า</div>
+                </div>
+            </div>
+            <!-- 35 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/35.jpg" alt="บ้านสไตล์รีสอร์ท 35" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายในตาดีการ</div>
+                    <div class="portfolio-desc">เป็นอาคารเรียนขนาดเล็ก ของศาสนาอิสลาม ที่สร้างขึ้นพร้อมสุเหร่า</div>
+                </div>
+            </div>
+            <!-- 36 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/36.jpg" alt="บ้านสไตล์รีสอร์ท 36" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์รีสอร์ท</div>
+                    <div class="portfolio-desc">บ้านพักสไตล์รีสอร์ท มีความมินิมอลและโมเดิร์นในตัว</div>
+                </div>
+            </div>
+            <!-- 37 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/37.jpg" alt="บ้านสไตล์รีสอร์ท 37" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านสไตล์โมเดิร์นขนาดพอดี สำหรับ 1 ครอบครัว</div>
+                </div>
+            </div>
+            <!-- 38 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/38.jpg" alt="บ้านสไตล์รีสอร์ท 38" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายในบ้านโมเดิร์น</div>
+                    <div class="portfolio-desc">ห้องน้ำบ้านโมเดิร์น</div>
+                </div>
+            </div>
+            <!-- 39 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/39.jpg" alt="บ้านสไตล์รีสอร์ท 39" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านพักตากอากาศสไตล์โมเดิร์น เน้นความโปร่งโล่งและธรรมชาติ</div>
+                </div>
+            </div>
+            <!-- 40 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/40.jpg" alt="บ้านแฝดสไตล์โมเดิร์น 40" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านแฝดสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านแฝดสไตล์โมเดิร์น พื้นที่กว้าง มีที่จอดรถและรั้วรอบ</div>
+                </div>
+            </div>
+            <!-- 41 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/41.jpg" alt="บ้านแฝดสไตล์โมเดิร์น 41" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านแฝดสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านแฝดสไตล์โมเดิร์น พื้นที่กว้าง มีที่จอดรถและรั้วรอบ</div>
+                </div>
+            </div>
+            <!-- 42 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/42.jpg" alt="บ้านแฝดสไตล์โมเดิร์น 42" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายในบ้านแฝดสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">ภายในบ้านแฝดสไตล์โมเดิร์น 3 ห้องนอน 2 ห้องน้ำ 1 ห้องครัว 1 ห้องโถง</div>
+                </div>
+            </div>
+            <!-- 43 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/43.jpg" alt="บ้านสไตล์รีสอร์ท 43" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายใน</div>
+                    <div class="portfolio-desc">ภายในบ้านเราออกแบบตามความชอบของลูกค้า</div>
+                </div>
+            </div>
+            <!-- 44 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/44.jpg" alt="บ้านสไตล์รีสอร์ท 44" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายใน</div>
+                    <div class="portfolio-desc">ภายในบ้านเราออกแบบตามความชอบของลูกค้า</div>
+                </div>
+            </div>
+            <!-- 45 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/45.jpg" alt="บ้านสไตล์รีสอร์ท 45" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น นอดิก</div>
+                    <div class="portfolio-desc">บ้านสไตล์โมเดิร์น นอดิก เน้นความโปร่งโล่งและธรรมชาติ</div>
+                </div>
+            </div>
+            <!-- 46 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/46.jpg" alt="บ้านสไตล์รีสอร์ท 46" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายใน</div>
+                    <div class="portfolio-desc">ภายในบ้านเราออกแบบตามความชอบของลูกค้า</div>
+                </div>
+            </div>
+            <!-- 47 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/47.jpg" alt="บ้านสไตล์รีสอร์ท 47" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ห้องน้ำ</div>
+                    <div class="portfolio-desc">ภายในห้องน้ำเราออกแบบตามความชอบของลูกค้า</div>
+                </div>
+            </div>
+            <!-- 48 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/48.jpg" alt="บ้านสไตล์รีสอร์ท 48" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายใน</div>
+                    <div class="portfolio-desc">ภายในบ้านเราออกแบบตามความชอบของลูกค้า</div>
+                </div>
+            </div>
+            <!-- 49 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/49.jpg" alt="บ้านทรงปั้นหยา 49" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงปั้นหยา</div>
+                    <div class="portfolio-desc">บ้านขนาดกลาง 3 ห้องนอน 2 ห้องน้ำ 1 ห้องครัว 1 ห้องโถง</div>
+                </div>
+            </div>
+            <!-- 50 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/50.jpg" alt="บ้านทรงปั้นหยา 50" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงปั้นหยา</div>
+                    <div class="portfolio-desc">บ้านขนาดกลาง 3 ห้องนอน 2 ห้องน้ำ 1 ห้องครัว 1 ห้องโถง</div>
+                </div>
+            </div>
+            <!-- 51 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/51.jpg" alt="บ้านทรงปั้นหยา 51" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายใน</div>
+                    <div class="portfolio-desc">บ้านทรงนอดิก ขนาดย่อม พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 52 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/52.jpg" alt="บ้านสไตล์รีสอร์ท 52" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายใน</div>
+                    <div class="portfolio-desc">บ้านทรงนอดิก ขนาดย่อม พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 53 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/53.jpg" alt="บ้านทรงนอดิก 53" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงนอดิก</div>
+                    <div class="portfolio-desc">บ้านทรงนอดิก ขนาดย่อม พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 54 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/54.jpg" alt="บ้านทรงนอดิก 54" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ภายในห้องน้ำ บ้านทรงนอดิก</div>
+                    <div class="portfolio-desc">บ้านทรงนอดิก ขนาดย่อม พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 55 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/55.jpg" alt="บ้านสไตล์รีสอร์ท 55" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงนอดิก</div>
+                    <div class="portfolio-desc">บ้านทรงนอดิก ขนาดย่อม พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 56 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/56.jpg" alt="บ้านสไตล์รีสอร์ท 56" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงนอดิก</div>
+                    <div class="portfolio-desc">บ้านทรงนอดิก ขนาดย่อม พร้อมพื้นที่ใช้สอยอย่างลงตัว</div>
+                </div>
+            </div>
+            <!-- 57 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/57.jpg" alt="บ้านสไตล์รีสอร์ท 57" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บัวพื้น และ กระเบื้อง</div>
+                    <div class="portfolio-desc">กระเบื้อง และ บัวพื้น สามารถเลือกสีเลือกลายได้ตามความชอบของลูกค้า</div>
+                </div>
+            </div>
+            <!-- 58 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/58.jpg" alt="บ้านทรงหน้าจั่ว สไตล์โมเดิร์น 58" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงหน้าจั่ว สไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านพักขนาดย่อม พร้อมด้วยพื้นที่ใช้สอยอย่างลงตัว ฟั่งชั่นครบครัน พร้อมอยู่</div>
+                </div>
+            </div>
+            <!-- 59 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/59.jpg" alt="บ้านทรงหน้าจั่ว สไตล์โมเดิร์น 59" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงหน้าจั่ว สไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านพักขนาดย่อม พร้อมด้วยพื้นที่ใช้สอยอย่างลงตัว ฟั่งชั่นครบครัน พร้อมอยู่</div>
+                </div>
+            </div>
+            <!-- 60 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/60.jpg" alt="บ้านทรงหน้าจั่ว สไตล์โมเดิร์น 60" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">เจ้าของบ้านทรงหน้าจั่ว สไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">เจ้าของบ้านชาวอังกฤษ สร้างบ้านหลังนี้โดยประสานงานจากต่างประเทศไม่ค่อยได้เข้ามาดู แต่ทีมงานเราสร้างให้เสร็จ จบถูกใจลูกค้า</div>
+                </div>
+            </div>
+            <!-- 61 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/61.JPG" alt="บ้านสไตล์รีสอร์ท 61" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงปั้นหยา สไตล์มินิมอล</div>
+                    <div class="portfolio-desc">บ้านพักตากอากาศสไตล์มินิมอล เน้นความโปร่งโล่งและธรรมชาติ</div>
+                </div>
+            </div>
+            <!-- 62 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/62.JPG" alt="บ้านทรงปั้นหยา สไตล์มินิมอล 62" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านทรงปั้นหยา สไตล์มินิมอล</div>
+                    <div class="portfolio-desc">บ้านพักตากอากาศสไตล์มินิมอล เน้นความโปร่งโล่งและธรรมชาติ</div>
+                </div>
+            </div>
+            <!-- 63 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/63.JPG" alt="บ้านทรงปั้นหยา สไตล์มินิมอล 63" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านเดี่ยว สไตล์โมเดิร์น 3 ห้องนอน 2 ห้องน้ำ 1 ห้องครัว</div>
+                </div>
+            </div>
+            <!-- 64 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/64.JPG" alt="บ้านทรงปั้นหยา สไตล์มินิมอล 64" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านสไตล์โมเดิร์น</div>
+                    <div class="portfolio-desc">บ้านเดี่ยว สไตล์โมเดิร์น 3 ห้องนอน 2 ห้องน้ำ 1 ห้องครัว</div>
+                </div>
+            </div>
+            <!-- 65 -->
+            <div class="portfolio-item" style="animation-delay:0.48s">
+                <img src="house/65.JPG" alt="บ้านสไตล์รีสอร์ท 65" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">บ้านนอดิก สไตล์รีสอร์ท</div>
+                    <div class="portfolio-desc">เจ้าของบ้านหลังนี้ สร้างกับเรา 5 หลัง พร้อมเทพื้นถนน และ สร้างสระว่ายน้ำ</div>
+                </div>
+            </div>
+    </div>
+</div>
+    <footer>
+        &copy; 2025 เกรียงไกร การช่าง. สงวนลิขสิทธิ์.
+    </footer>
+</body>
+</html>

@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ผลงาน ต่อเติมบ้าน</title>
+    <style>
+        html {
+            box-sizing: border-box;
+            font-size: 16px;
+        }
+        *, *:before, *:after {
+            box-sizing: inherit;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            background: linear-gradient(135deg, #ffffff 0%, #237e4c 100%);
+            color: rgb(0, 0, 0);
+        }
+        header {
+            background: linear-gradient(135deg, #000305 0%, #237e4c 100%);
+            color: #fff;
+            padding: 2rem 0;
+            text-align: center;
+            animation: fadeDown 1s;
+        }
+        @keyframes fadeDown {
+            from { opacity: 0; transform: translateY(-30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        .container {
+            max-width: 1100px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+            animation: fadeIn 1.2s;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0;}
+            to { opacity: 1;}
+        }
+        h1 {
+            margin: 0 0 20px 0;
+            font-weight: 600;
+            color: #ffffff;
+        }
+        h2 {
+            font-size: 2.5rem;
+            color: #000000;
+            font-weight: 700;
+            margin: 20px 0;
+            text-align: center;
+            position: static;
+            border-radius: 12px;
+            border: 2px solid #fff;
+            box-shadow: 0 2px 10px 4px rgba(74,101,114,0.18);
+            padding: 18px 0;
+            backdrop-filter: blur(8px);
+            background: rgba(255, 255, 255, 0.45);
+        }
+        .portfolio-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+            justify-content: center;
+        }
+        .portfolio-item {
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+            opacity: 0;
+            transform: translateY(40px) scale(0.98);
+            animation: fadeInUpExt 0.9s cubic-bezier(.4,1.4,.6,1) forwards;
+        }
+        .portfolio-item:hover {
+            transform: translateY(-5px) scale(1.02);
+            box-shadow: 0 8px 24px rgba(0,0,0,0.13);
+        }
+        .portfolio-img {
+            width: 100%;
+            height: 360px;
+            object-fit: cover;
+            display: block;
+            background: #e0e0e0;
+            transform: scale(1);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), filter 0.3s;
+        }
+        .portfolio-img:hover {            
+            transform: scale(1.08);
+        }
+        .portfolio-content {
+            padding: 1rem;
+        }
+        .portfolio-title {
+            font-size: 1.2rem;
+            margin: 0 0 0.5rem 0;
+            color: #2d3e50;
+        }
+        .portfolio-desc {
+            font-size: 1rem;
+            color: #555;
+        }
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 98vw;
+            }
+        }
+        @media (max-width: 900px) {
+            .portfolio-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .portfolio-img {
+                height: 200px;
+            }
+            h2 {
+                font-size: 2rem;
+            }
+        }
+        @media (max-width: 600px) {
+            .portfolio-grid {
+                grid-template-columns: 1fr;
+            }
+            .portfolio-img {
+                height: 260px;
+            }
+            h2 {
+                font-size: 1.3rem;
+                padding: 10px 0;
+            }
+            .container {
+                padding: 0 0.5rem;
+            }
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background: linear-gradient(135deg, #000305 0%, #237e4c 100%);
+            color: #fff;
+            width: 100%;
+            animation: fadeUp 1s;
+            z-index: 100;
+        }
+        @keyframes fadeUp {
+            from { opacity: 0; transform: translateY(30px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @keyframes fadeInUpExt {
+            from {
+                opacity: 0;
+                transform: translateY(40px) scale(0.98);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+    </style>
+<body>
+    <header>
+        <h1>ผลงาน ต่อเติมบ้าน</h1>
+        <p>รวมผลงานการออกแบบและต่อเติมบ้านที่โดดเด่น</p>
+    </header>
+    <div class="container">
+        <h2>ผลงานของเรา</h2>
+        <div class="portfolio-grid">
+            <!-- ผลงานต่อเติม 1-61 -->
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/1.jpg" alt="ผลงานต่อเติม 1" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 1</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/2.jpg" alt="ผลงานต่อเติม 2" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 2</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/3.jpg" alt="ผลงานต่อเติม 3" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 3</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/4.jpg" alt="ผลงานต่อเติม 4" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 4</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/5.jpg" alt="ผลงานต่อเติม 5" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 5</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/6.jpg" alt="ผลงานต่อเติม 6" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 6</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/7.jpg" alt="ผลงานต่อเติม 7" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 7</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/8.jpg" alt="ผลงานต่อเติม 8" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 8</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/9.jpg" alt="ผลงานต่อเติม 9" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 9</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/10.jpg" alt="ผลงานต่อเติม 10" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 10</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/11.jpg" alt="ผลงานต่อเติม 11" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 11</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/12.jpg" alt="ผลงานต่อเติม 12" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 12</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/13.jpg" alt="ผลงานต่อเติม 13" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 13</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/14.jpg" alt="ผลงานต่อเติม 14" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 14</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/15.jpg" alt="ผลงานต่อเติม 15" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 15</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/16.jpg" alt="ผลงานต่อเติม 16" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 16</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/17.jpg" alt="ผลงานต่อเติม 17" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 17</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/18.jpg" alt="ผลงานต่อเติม 18" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 18</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/19.jpg" alt="ผลงานต่อเติม 19" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 19</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/20.jpg" alt="ผลงานต่อเติม 20" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 20</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/21.jpg" alt="ผลงานต่อเติม 21" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 21</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/22.jpg" alt="ผลงานต่อเติม 22" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 22</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/23.jpg" alt="ผลงานต่อเติม 23" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 23</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/24.jpg" alt="ผลงานต่อเติม 24" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 24</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/25.jpg" alt="ผลงานต่อเติม 25" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 25</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/26.jpg" alt="ผลงานต่อเติม 26" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 26</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/27.jpg" alt="ผลงานต่อเติม 27" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 27</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/28.jpg" alt="ผลงานต่อเติม 28" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 28</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/29.jpg" alt="ผลงานต่อเติม 29" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 29</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/30.jpg" alt="ผลงานต่อเติม 30" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 30</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/31.jpg" alt="ผลงานต่อเติม 31" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 31</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/32.jpg" alt="ผลงานต่อเติม 32" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 32</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/33.jpg" alt="ผลงานต่อเติม 33" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 33</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/34.jpg" alt="ผลงานต่อเติม 34" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 34</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/35.jpg" alt="ผลงานต่อเติม 35" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 35</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/36.jpg" alt="ผลงานต่อเติม 36" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 36</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/37.jpg" alt="ผลงานต่อเติม 37" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 37</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/38.jpg" alt="ผลงานต่อเติม 38" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 38</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/39.jpg" alt="ผลงานต่อเติม 39" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 39</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/40.jpg" alt="ผลงานต่อเติม 40" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 40</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/41.jpg" alt="ผลงานต่อเติม 41" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 41</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/42.jpg" alt="ผลงานต่อเติม 42" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 42</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/43.jpg" alt="ผลงานต่อเติม 43" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 43</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/44.jpg" alt="ผลงานต่อเติม 44" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 44</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/45.jpg" alt="ผลงานต่อเติม 45" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 45</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/46.jpg" alt="ผลงานต่อเติม 46" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 46</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/47.jpg" alt="ผลงานต่อเติม 47" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 47</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/48.jpg" alt="ผลงานต่อเติม 48" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 48</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/49.jpg" alt="ผลงานต่อเติม 49" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 49</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/50.jpg" alt="ผลงานต่อเติม 50" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 50</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/51.jpg" alt="ผลงานต่อเติม 51" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 51</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/52.jpg" alt="ผลงานต่อเติม 52" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 52</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/53.jpg" alt="ผลงานต่อเติม 53" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 53</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/54.jpg" alt="ผลงานต่อเติม 54" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 54</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/55.jpg" alt="ผลงานต่อเติม 55" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 55</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/56.jpg" alt="ผลงานต่อเติม 56" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 56</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/57.JPG" alt="ผลงานต่อเติม 58" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 58</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/58.JPG" alt="ผลงานต่อเติม 59" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 59</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/59.JPG" alt="ผลงานต่อเติม 60" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 60</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+            <div class="portfolio-item" style="animation-delay:0.12s">
+                <img src="TT/60.JPG" alt="ผลงานต่อเติม 61" class="portfolio-img">
+                <div class="portfolio-content">
+                    <div class="portfolio-title">ผลงานต่อเติม 61</div>
+                    <div class="portfolio-desc"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        &copy; 2025 เกรียงไกร การช่าง. สงวนลิขสิทธิ์.
+    </footer>
+</body>
+</html>
